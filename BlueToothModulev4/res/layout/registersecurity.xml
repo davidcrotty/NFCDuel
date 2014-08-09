@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/registersecuritylayout" >
+    
+    <LinearLayout
+        android:id="@+id/securityView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedfieldregister"
+        android:orientation="vertical"
+        android:padding="20dp" >
+        
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:textColor="#FFFFFF"
+            android:text="Password validation"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+         <EditText
+            android:id="@+id/passwordField"
+            android:background="@drawable/darkedittext"
+            android:hint="Password"
+            android:padding="5dp"
+            android:textColor="#FFFFFF"
+            android:inputType="textWebPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" >
+
+            
+        </EditText>
+        
+         <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" 
+            />
+         
+          <EditText
+            android:id="@+id/confirmPasswordField"
+            android:background="@drawable/darkedittext"
+            android:hint="Confirm password"
+            android:inputType="textWebPassword"
+            android:padding="5dp"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" >
+
+            
+        </EditText>
+        
+       
+
+
+</LinearLayout>
+
+    
+
+    <TextView
+            android:id="@+id/ErrorView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:textColor="#FFFFFF"
+            android:layout_above="@+id/confirmButton"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/greenbutton"
+        android:text="Submit"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+    
+ 
+
+</RelativeLayout>

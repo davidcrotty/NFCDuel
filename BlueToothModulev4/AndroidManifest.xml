@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bluetoothmodulev4"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Bluetheme" >
+        <activity
+            android:name="com.androidactivities.MainActivity"
+            android:label="NFCDuel"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+        <!-- Add new activity and prevent from being recreated on rotate -->
+        <activity
+            android:name="com.androidactivities.Pairing"
+            android:configChanges="orientation|screenSize" >
+        </activity>
+        <activity android:name="com.androidactivities.ChallengeActivity" >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androidactivities.MainActivity" />
+        </activity>
+        <activity android:name="com.androidactivities.TutorialActivity" >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+        <activity android:name="com.androidactivities.CharacterSelect" >
+        </activity>
+
+        <service android:name="services.CommsService" >
+        </service>
+
+        <activity
+            android:name="com.androidactivities.CharacterSelectActivity"
+            android:configChanges="orientation" >
+        </activity>
+        <activity
+            android:name="libgdx.GameStarter"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+        <activity
+            android:name="com.androidactivities.LoginActivity"
+            android:windowSoftInputMode="adjustNothing" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androidactivities.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.androidactivities.RegisterActivity"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androidactivities.MainActivity" />
+        </activity>
+        <activity android:name="com.androidactivities.ProfileViewerActivity" >
+            
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androidactivities.MainActivity" />
+            
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androidactivities.MainActivity"
+                android:resource="@xml/searchable" />
+
+            
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            
+        </activity>
+        <activity
+            android:name="com.androidactivities.BattleOverview"
+            android:screenOrientation="landscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androidactivities.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.androidactivities.Profile"
+            android:screenOrientation="landscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androidactivities.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

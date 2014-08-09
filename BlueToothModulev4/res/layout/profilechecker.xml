@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:background="@drawable/dialogrounded"
+        >
+        
+        <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+    </LinearLayout>
+    
+	<LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        
+        >
+        
+	    <ImageView
+	    android:id="@+id/rankIcon"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	     />
+	    
+	    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dp" >
+        
+	        <TextView
+        android:id="@+id/labelFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="#000000"
+        android:text="First name:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+        android:id="@+id/labelLast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="#000000"
+        android:text="Last name:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+        android:id="@+id/labelRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="#000000"
+        android:text="Rank:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+        android:id="@+id/labelLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="#000000"
+        android:text="Level:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+	        
+	    </LinearLayout>    
+	    
+	    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dp" >
+        
+        <TextView
+        android:id="@+id/firstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="#000000"
+        android:text="test"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+        android:id="@+id/lastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="#000000"
+        android:text="test"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+        android:id="@+id/rankName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="#000000"
+        android:text="test"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="#000000"
+        android:text="test"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+         </LinearLayout>
+        
+	    </LinearLayout>
+
+	
+    
+</LinearLayout>
